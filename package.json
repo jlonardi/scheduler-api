@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
-    "start": "node dist/index.js",
-    "postinstall": "tsc && db-migrate up",
+    "start": "db-migrate up && node dist/index.js",
+    "postinstall": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix ./src --ext js,jsx",
     "seed": "node src/utils/seed.js"
@@ -26,6 +26,7 @@
     "connect-pg-simple": "^4.2.1",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
+    "db-migrate": "^0.11.4",
     "db-migrate-pg": "^0.4.0",
     "dotenv": "^5.0.1",
     "express": "^4.16.4",
@@ -52,7 +53,6 @@
     "@types/passport-http-bearer": "^1.0.33",
     "@types/request-promise": "^4.1.42",
     "cross-env": "^5.2.0",
-    "db-migrate": "^0.11.4",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-import-resolver-webpack": "^0.8.1",
