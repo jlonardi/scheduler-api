@@ -1,0 +1,4 @@
+{
+  "ext": "*",
+  "exec": "node --inspect -r ts-node/register ./src/index.ts"
+}

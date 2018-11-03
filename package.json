@@ -1,0 +1,69 @@
+{
+  "name": "scheduler-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "start": "node dist/index.js",
+    "postinstall": "tsc && db-migrate up",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ./src --ext js,jsx",
+    "seed": "node src/utils/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlonardi/scheduler-api.git"
+  },
+  "author": "Jarno Lonardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlonardi/scheduler-api/issues"
+  },
+  "homepage": "https://github.com/jlonardi/scheduler-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-pg-simple": "^4.2.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "db-migrate-pg": "^0.4.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "pg": "^7.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/connect-pg-simple": "^4.2.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/cors": "^2.8.4",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/express-session": "^1.15.11",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.12.2",
+    "@types/passport": "^0.4.7",
+    "@types/passport-http-bearer": "^1.0.33",
+    "@types/request-promise": "^4.1.42",
+    "cross-env": "^5.2.0",
+    "db-migrate": "^0.11.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}

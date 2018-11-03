@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:10
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scheduler-api
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+    links:
+    - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/scheduler-api
+      DATABASE_HOST: localhost
+      DATABASE_NAME: postgres

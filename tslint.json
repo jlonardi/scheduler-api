@@ -1,0 +1,15 @@
+{
+  "enable": true,
+  "extends": ["tslint:latest"],
+  "rules": {
+    // override tslint-react rules here
+    "member-access": false,
+    "no-implicit-dependencies": false,
+    "interface-name": false,
+    "quotemark": [true, "single"],
+    "object-literal-sort-keys": false,
+    "variable-name": false,
+    "ordered-imports": false,
+    "no-object-literal-type-assertion": false
+  }
+}
